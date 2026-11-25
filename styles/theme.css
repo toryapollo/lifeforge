@@ -1,0 +1,84 @@
+:root {
+  color-scheme: dark;
+  --surface-primary: #16120f;
+  --surface-secondary: #211a14;
+  --surface-raised: #2c231b;
+  --text-primary: #fff4e8;
+  --text-secondary: #d0beaa;
+  --text-muted: #b09b83;
+  --border-default: #514131;
+  --accent-primary: #ff7a1a;
+  --accent-hover: #ff9748;
+  --accent-gold: #ffc14d;
+  --accent-foreground: #21180f;
+  --status-success: #8cd0a0;
+  --status-warning: #f0c56e;
+  --status-error: #ff9585;
+  --status-info: #8dc5da;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-small: 4px;
+  --radius-control: 8px;
+  --radius-panel: 12px;
+  --nav-width: 272px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --surface-primary: #fff9f0;
+  --surface-secondary: #f3e9dc;
+  --surface-raised: #fffcf8;
+  --text-primary: #21180f;
+  --text-secondary: #594936;
+  --text-muted: #735d48;
+  --border-default: #d8c4aa;
+  --accent-primary: #b84d0a;
+  --accent-hover: #963b05;
+  --accent-gold: #805000;
+  --accent-foreground: #fff9f0;
+  --status-success: #286a3d;
+  --status-warning: #795000;
+  --status-error: #a43124;
+  --status-info: #28586b;
+}
+
+:root[data-theme="system"] {
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root[data-theme="system"] {
+    color-scheme: light;
+    --surface-primary: #fff9f0;
+    --surface-secondary: #f3e9dc;
+    --surface-raised: #fffcf8;
+    --text-primary: #21180f;
+    --text-secondary: #594936;
+    --text-muted: #735d48;
+    --border-default: #d8c4aa;
+    --accent-primary: #b84d0a;
+    --accent-hover: #963b05;
+    --accent-gold: #805000;
+    --accent-foreground: #fff9f0;
+    --status-success: #286a3d;
+    --status-warning: #795000;
+    --status-error: #a43124;
+    --status-info: #28586b;
+  }
+}
+

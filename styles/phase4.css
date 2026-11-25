@@ -1,0 +1,110 @@
+.phase4-screen {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.phase4-screen .empty-state {
+  text-wrap: pretty;
+}
+
+.p4-score-list,
+.p4-evidence-list {
+  display: grid;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.p4-score-row {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(4rem, 1fr) auto;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.p4-score-row progress,
+.p4-calibration-list progress {
+  width: 100%;
+  accent-color: var(--accent-primary);
+}
+
+.p4-score-row span,
+.p4-evidence-list span,
+.p4-benchmark-values dd {
+  overflow-wrap: anywhere;
+}
+
+.p4-evidence-list li {
+  display: grid;
+  grid-template-columns: minmax(4rem, 0.6fr) minmax(5rem, 0.5fr) minmax(0, 2fr);
+  align-items: baseline;
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--border-default);
+  padding-block: var(--space-2);
+}
+
+.p4-evidence-list li span:nth-child(2) {
+  font-variant-numeric: tabular-nums;
+}
+
+.p4-calibration-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.p4-calibration-list label {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.8fr) minmax(6rem, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.p4-benchmark-values {
+  margin: 0;
+}
+
+.p4-benchmark-values > div {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: var(--space-3);
+  border-top: 1px solid var(--border-default);
+  padding-block: var(--space-2);
+}
+
+.p4-benchmark-values dt {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.p4-benchmark-values dd {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .p4-evidence-list li {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-1) var(--space-3);
+  }
+
+  .p4-evidence-list li span:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .p4-calibration-list label {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .p4-calibration-list progress {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .p4-benchmark-values > div {
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  }
+}

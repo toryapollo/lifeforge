@@ -1,0 +1,45 @@
+/* Phones (iPhone etc., <=560px wide): keep the bottom chrome short so lessons get the screen.
+   The 988 crisis line and Life on Fire stay visible on every screen. */
+@media (max-width: 560px) {
+  .global-support {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) max(var(--space-3), env(safe-area-inset-right)) var(--space-2) max(var(--space-3), env(safe-area-inset-left));
+  }
+  .global-support .button {
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  .global-support > div { gap: 0; }
+  .global-support p { font-size: 0.78rem; line-height: 1.35; }
+  .global-support p + p { display: none; }   /* doctor/therapist line stays on Life on Fire and Help */
+
+  .mobile-nav {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 2px;
+    padding-top: 4px;
+    padding-bottom: calc(4px + env(safe-area-inset-bottom));
+  }
+  .mobile-nav .nav-link {
+    min-height: 44px;
+    padding: 2px 0;
+    gap: 1px;
+    font-size: 0.62rem;
+    line-height: 1.2;
+  }
+  .mobile-nav .nav-symbol { width: 20px; height: 20px; font-size: 11px; }
+  .mobile-nav .nav-link > span:last-child { overflow-wrap: normal; white-space: nowrap; }
+
+  /* Date/time pickers have a wide built-in size on iOS; keep them inside their card. */
+  .app-main input, .app-main select, .app-main textarea { min-width: 0; max-width: 100%; }
+  .app-main input[type="date"], .app-main input[type="time"] { width: 100%; }
+}
+
+/* Very small phones (iPhone SE 1st gen, 320px): 7 tabs per row is too tight. */
+@media (max-width: 359px) {
+  .mobile-nav { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}

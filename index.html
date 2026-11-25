@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-reduce-motion="false">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#16120f">
+  <meta name="description" content="A private, offline classroom for building a life you choose.">
+  <title>LIFEFORGE: Your personal classroom</title>
+  <link rel="icon" type="image/png" sizes="48x48" href="img/lifeforge-48.png">
+  <link rel="stylesheet" href="app.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="LIFEFORGE">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-shell" id="app">
+    <aside class="app-sidebar" aria-label="LIFEFORGE navigation">
+      <a class="brand" href="#/mission" aria-label="LIFEFORGE home">
+        <img src="img/lifeforge-192.png" width="48" height="48" alt="">
+        <span>
+          <strong>LIFEFORGE</strong>
+          <small>Your personal classroom</small>
+        </span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="#/mission" data-route="mission"><span class="nav-symbol" aria-hidden="true">M</span><span>Mission</span></a>
+        <a class="nav-link" href="#/onboarding" data-route="onboarding"><span class="nav-symbol" aria-hidden="true">S</span><span>Start</span></a>
+        <a class="nav-link" href="#/today" data-route="today"><span class="nav-symbol" aria-hidden="true">T</span><span>Today</span></a>
+        <a class="nav-link" href="#/study" data-route="study"><span class="nav-symbol" aria-hidden="true">L</span><span>Study</span></a>
+        <a class="nav-link" href="#/flow" data-route="flow"><span class="nav-symbol" aria-hidden="true">F</span><span>Flow</span></a>
+        <a class="nav-link" href="#/weekly" data-route="weekly"><span class="nav-symbol" aria-hidden="true">W</span><span>Weekly</span></a>
+        <a class="nav-link" href="#/progress" data-route="progress"><span class="nav-symbol" aria-hidden="true">P</span><span>Progress</span></a>
+        <a class="nav-link" href="#/money" data-route="money"><span class="nav-symbol" aria-hidden="true">$</span><span>Money</span></a>
+        <a class="nav-link" href="#/thinking" data-route="thinking"><span class="nav-symbol" aria-hidden="true">?</span><span>Thinking</span></a>
+        <a class="nav-link" href="#/resilience" data-route="resilience"><span class="nav-symbol" aria-hidden="true">R</span><span>Resilience</span></a>
+        <a class="nav-link" href="#/speak" data-route="speak"><span class="nav-symbol" aria-hidden="true">V</span><span>Speak</span></a>
+        <a class="nav-link" href="#/conversations" data-route="conversations"><span class="nav-symbol" aria-hidden="true">C</span><span>Conversations</span></a>
+        <a class="nav-link" href="#/settings" data-route="settings"><span class="nav-symbol" aria-hidden="true">S</span><span>Settings</span></a>
+        <a class="nav-link" href="#/help" data-route="help"><span class="nav-symbol" aria-hidden="true">?</span><span>Help</span></a>
+      </nav>
+      <div class="sidebar-note">
+        <p>Private by design.<br>Saved on this device.</p>
+      </div>
+    </aside>
+
+    <main class="app-main" id="main-content" tabindex="-1">
+      <header class="topbar">
+        <p class="topbar-label">A steady place to practice</p>
+      </header>
+      <div class="page-shell" id="route-view"></div>
+      <p class="live-status" id="live-status" role="status" aria-live="polite"></p>
+    </main>
+  </div>
+
+  <div class="global-support" role="region" aria-label="Life on Fire and crisis support">
+    <a class="button button-primary" href="#/fire" data-route="fire">Life on Fire</a>
+    <div>
+      <p>In crisis? Use the 988 Suicide &amp; Crisis Lifeline (US): <a href="tel:988">Call 988</a> or <a href="sms:988">text 988</a>.</p>
+      <p>If low mood lasts more than 2 weeks, talk to a doctor or therapist.</p>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Primary navigation">
+    <a class="nav-link" href="#/mission" data-route="mission" aria-label="Mission"><span class="nav-symbol" aria-hidden="true">M</span><span class="nav-label-full">Mission</span><span class="nav-label-compact" aria-hidden="true">Home</span></a>
+    <a class="nav-link" href="#/onboarding" data-route="onboarding"><span class="nav-symbol" aria-hidden="true">S</span><span>Start</span></a>
+    <a class="nav-link" href="#/today" data-route="today"><span class="nav-symbol" aria-hidden="true">T</span><span>Today</span></a>
+    <a class="nav-link" href="#/study" data-route="study"><span class="nav-symbol" aria-hidden="true">L</span><span>Study</span></a>
+    <a class="nav-link" href="#/flow" data-route="flow"><span class="nav-symbol" aria-hidden="true">F</span><span>Flow</span></a>
+    <a class="nav-link" href="#/weekly" data-route="weekly" aria-label="Weekly review"><span class="nav-symbol" aria-hidden="true">W</span><span class="nav-label-full">Weekly</span><span class="nav-label-compact" aria-hidden="true">Week</span></a>
+    <a class="nav-link" href="#/progress" data-route="progress" aria-label="Progress"><span class="nav-symbol" aria-hidden="true">P</span><span class="nav-label-full">Progress</span><span class="nav-label-compact" aria-hidden="true">Stats</span></a>
+    <a class="nav-link" href="#/money" data-route="money" aria-label="Money"><span class="nav-symbol" aria-hidden="true">$</span><span class="nav-label-full">Money</span><span class="nav-label-compact" aria-hidden="true">Cash</span></a>
+    <a class="nav-link" href="#/thinking" data-route="thinking" aria-label="Thinking"><span class="nav-symbol" aria-hidden="true">?</span><span class="nav-label-full">Thinking</span><span class="nav-label-compact" aria-hidden="true">Think</span></a>
+    <a class="nav-link" href="#/resilience" data-route="resilience" aria-label="Resilience"><span class="nav-symbol" aria-hidden="true">R</span><span class="nav-label-full">Resilience</span><span class="nav-label-compact" aria-hidden="true">Reset</span></a>
+      <a class="nav-link" href="#/speak" data-route="speak"><span class="nav-symbol" aria-hidden="true">V</span><span>Speak</span></a>
+      <a class="nav-link" href="#/conversations" data-route="conversations" aria-label="Conversations"><span class="nav-symbol" aria-hidden="true">C</span><span class="nav-label-full">Conversations</span><span class="nav-label-compact" aria-hidden="true">Talk</span></a>
+    <a class="nav-link" href="#/settings" data-route="settings" aria-label="Settings"><span class="nav-symbol" aria-hidden="true">S</span><span class="nav-label-full">Settings</span><span class="nav-label-compact" aria-hidden="true">Prefs</span></a>
+    <a class="nav-link" href="#/help" data-route="help"><span class="nav-symbol" aria-hidden="true">?</span><span>Help</span></a>
+  </nav>
+  <script src="phase2-state.js" defer></script>
+  <script src="phase3-state.js" defer></script>
+  <script src="phase4-state.js" defer></script>
+  <script src="content/modules.js" defer></script>
+  <script src="core.js" defer></script>
+  <script src="state.js" defer></script>
+  <script src="views.js" defer></script>
+  <script src="actions.js" defer></script>
+  <script src="selftest.js" defer></script>
+  <script src="phase1-content.js" defer></script>
+  <script src="phase1-views.js" defer></script>
+  <script src="phase1-onboarding.js" defer></script>
+  <script src="phase1-today.js" defer></script>
+  <script src="phase1-weekly.js" defer></script>
+  <script src="phase1-study.js" defer></script>
+  <script src="phase1-flow.js" defer></script>
+  <script src="phase1-reminders.js" defer></script>
+  <script src="phase1-onboarding-actions.js" defer></script>
+  <script src="phase1-today-actions.js" defer></script>
+  <script src="phase1-weekly-actions.js" defer></script>
+  <script src="phase1-study-actions.js" defer></script>
+  <script src="phase1-flow-actions.js" defer></script>
+  <script src="phase1-settings-actions.js" defer></script>
+  <script src="phase1-actions.js" defer></script>
+  <script src="phase2-calculators.js" defer></script>
+  <script src="phase2-content.js" defer></script>
+  <script src="phase2-helpers.js" defer></script>
+  <script src="phase2-money.js" defer></script>
+  <script src="phase2-thinking.js" defer></script>
+  <script src="phase2-resilience.js" defer></script>
+  <script src="phase2-money-actions.js" defer></script>
+  <script src="phase2-thinking-actions.js" defer></script>
+  <script src="phase2-resilience-actions.js" defer></script>
+  <script src="phase2-actions.js" defer></script>
+  <script src="phase3-content.js" defer></script>
+  <script src="phase3-media.js" defer></script>
+  <script src="phase3-speaking-views.js" defer></script>
+  <script src="phase3-conversation-views.js" defer></script>
+  <script src="phase3-record-actions.js" defer></script>
+  <script src="phase3-talk-actions.js" defer></script>
+  <script src="phase3-actions.js" defer></script>
+  <script src="phase4-progress-data.js" defer></script>
+  <script src="phase4-progress.js" defer></script>
+  <script src="phase4-settings.js" defer></script>
+  <script src="phase4-actions.js" defer></script>
+  <script src="app.js" defer></script>
+<script>if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('sw.js'));</script>
+</body>
+</html>

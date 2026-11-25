@@ -1,0 +1,114 @@
+.phase3-screen {
+  display: grid; min-width: 0; gap: var(--space-8);
+  padding-bottom: var(--space-12);
+}
+
+.p3-group {
+  display: grid; min-width: 0; max-width: 980px;
+  gap: var(--space-4); padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.p3-group h2 { margin: 0; font-size: 25px; line-height: 1.3; }
+.p3-group h3 { margin: 0; font-size: 19px; }
+.p3-group > p,
+.p3-roleplay-stage > p { max-width: 800px; margin: 0; color: var(--text-secondary); overflow-wrap: anywhere; }
+
+.p3-fields,
+.p3-rubric,
+.p3-benchmarks {
+  display: grid; min-width: 0;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--space-3);
+}
+
+.p3-fields { align-items: end; gap: var(--space-4); }
+.p3-fields label,
+.p3-review-select,
+.p3-rubric label,
+.p3-prep-form > label {
+  display: grid; min-width: 0; gap: var(--space-2);
+  color: var(--text-secondary); font-weight: 600;
+}
+
+.p3-fields input,
+.p3-fields select,
+.p3-fields textarea,
+.p3-review-select select,
+.p3-rubric select,
+.p3-prep-form input,
+.p3-prep-form textarea {
+  box-sizing: border-box; width: 100%; min-width: 0; min-height: 48px;
+  padding: var(--space-3); border: 1px solid var(--border-default);
+  border-radius: var(--radius-control); background: var(--surface-primary);
+  color: var(--text-primary); font: inherit;
+}
+
+.p3-fields textarea,
+.p3-prep-form textarea { min-height: 88px; resize: vertical; }
+.p3-actions { display: flex; min-width: 0; align-items: center; flex-wrap: wrap; gap: var(--space-3); }
+.p3-actions .button { min-height: 48px; }
+.p3-status,
+.p3-prompt,
+.p3-feedback { min-width: 0; color: var(--text-secondary); overflow-wrap: anywhere; }
+
+.p3-video {
+  display: block; width: min(100%, 640px); max-height: 360px;
+  border-radius: var(--radius-panel); background: #000;
+}
+
+.p3-playback[hidden],
+.p3-video[hidden],
+.p3-playback audio[hidden] { display: none; }
+.p3-playback audio { width: min(100%, 640px); }
+.p3-recordings,
+.p3-objectives { display: grid; min-width: 0; gap: var(--space-3); padding-inline-start: var(--space-6); }
+
+.p3-recordings li {
+  display: flex; min-width: 0; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: var(--space-3); padding: var(--space-3);
+  border: 1px solid var(--border-default); border-radius: var(--radius-control);
+  background: var(--surface-secondary);
+}
+
+.p3-recordings li > div:first-child { display: grid; min-width: 0; }
+.p3-recordings span { color: var(--text-muted); font-size: 14px; }
+.p3-review-select { max-width: 620px; }
+.p3-counters output { display: inline-grid; min-width: 26px; place-items: center; font-weight: 800; font-variant-numeric: tabular-nums; }
+
+.p3-benchmark-card {
+  display: grid; min-width: 0; align-content: start; gap: var(--space-2);
+  padding: var(--space-4); border: 1px solid var(--border-default);
+  border-radius: var(--radius-panel); background: var(--surface-secondary);
+}
+
+.p3-benchmark-card p { margin: 0; color: var(--text-secondary); overflow-wrap: anywhere; }
+.p3-prompt,
+.p3-roleplay-stage {
+  padding: var(--space-4); border: 1px solid var(--border-default);
+  border-radius: var(--radius-control); background: var(--surface-secondary);
+}
+
+.p3-prep-form { display: grid; min-width: 0; gap: var(--space-4); }
+.p3-prep-form .p3-fields label { grid-column: span 1; }
+.p3-roleplay-stage { display: grid; min-width: 0; gap: var(--space-3); }
+.p3-roleplay-choices { display: grid; min-width: 0; gap: var(--space-3); }
+.p3-roleplay-choices .button { justify-self: start; max-width: 100%; white-space: normal; text-align: left; }
+.p3-scripts { display: grid; gap: var(--space-2); }
+
+.p3-scripts details,
+.p3-group > details {
+  min-width: 0; padding: var(--space-3); border: 1px solid var(--border-default);
+  border-radius: var(--radius-control); background: var(--surface-secondary);
+}
+
+.p3-scripts summary,
+.p3-group > details summary { min-height: 32px; color: var(--text-primary); font-weight: 700; cursor: pointer; }
+.p3-scripts details p { margin-bottom: 0; color: var(--text-secondary); overflow-wrap: anywhere; }
+.p3-objectives li { overflow-wrap: anywhere; }
+
+@media (max-width: 560px) {
+  .phase3-screen { gap: var(--space-6); }
+  .p3-group { gap: var(--space-3); }
+  .p3-roleplay-choices .button { width: 100%; }
+}

@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell {
+  height: auto;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+
+.app-main {
+  height: 100%;
+  min-height: 0;
+}
+
+.global-support {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4) var(--space-3) calc(var(--nav-width) + var(--space-4));
+  border-top: 1px solid var(--border-default);
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+}
+
+.global-support > * {
+  min-width: 0;
+}
+
+.global-support .button {
+  overflow-wrap: anywhere;
+}
+
+.global-support p {
+  margin: 0;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.global-support a:not(.button) {
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 960px), (orientation: portrait) and (max-width: 1300px) {
+  .global-support {
+    padding-inline: var(--space-4);
+  }
+}
+
+@media (max-width: 560px) {
+  .global-support {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .global-support > div {
+    display: grid;
+    gap: var(--space-1);
+  }
+}

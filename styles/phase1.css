@@ -1,0 +1,210 @@
+.phase1-screen {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.phase1-panel,
+.phase1-card,
+.module-reference {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-panel);
+  background: var(--surface-secondary);
+  padding: var(--space-5);
+}
+
+.phase1-panel h2,
+.phase1-card h3 {
+  margin-top: 0;
+}
+
+.phase1-grid,
+.phase1-fields,
+.block-list,
+.health-grid,
+.scorecard-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.phase1-grid,
+.health-grid,
+.scorecard-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+}
+
+.phase1-fields label,
+.phase1-card label,
+.phase1-panel label {
+  display: grid;
+  gap: var(--space-1);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.phase1-fields input,
+.phase1-fields textarea,
+.phase1-fields select,
+.phase1-card input,
+.phase1-card textarea,
+.phase1-card select,
+.phase1-panel input,
+.phase1-panel textarea,
+.phase1-panel select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  padding: var(--space-3);
+  font: inherit;
+}
+
+.phase1-fields textarea,
+.phase1-card textarea,
+.phase1-panel textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.phase1-checks {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.phase1-checks label,
+.reminder-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.phase1-checks input,
+.reminder-controls input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  accent-color: var(--accent-primary);
+}
+
+.phase1-actions,
+.block-actions,
+.study-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.phase1-actions {
+  margin-top: var(--space-4);
+}
+
+.phase1-actions .button,
+.block-actions .button {
+  min-height: 42px;
+}
+
+.block-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.block-row,
+.capture-row,
+.log-row,
+.review-row {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  background: var(--surface-primary);
+  padding: var(--space-3);
+}
+
+.block-editor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-2);
+}
+
+.phase1-step-indicator,
+.quiet-copy,
+.data-copy,
+.field-help {
+  color: var(--text-secondary);
+}
+
+.data-copy {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.data-tree {
+  margin: 0;
+}
+
+.data-tree > div {
+  border-top: 1px solid var(--border-default);
+  padding-block: var(--space-2);
+}
+
+.data-tree dt {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.data-tree dd {
+  margin-inline-start: var(--space-3);
+}
+
+.module-reference {
+  margin-top: var(--space-4);
+}
+
+.module-reference summary {
+  color: var(--accent-gold);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.timer-display {
+  color: var(--accent-gold);
+  font-size: clamp(2rem, 10vw, 4rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  text-align: center;
+}
+
+.reminder-row {
+  align-items: center;
+}
+
+.reminder-controls input[type="time"] {
+  min-height: 42px;
+  width: 130px;
+}
+
+.rating-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(36px, 1fr));
+  gap: var(--space-2);
+}
+
+.rating-row label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 560px) {
+  .phase1-panel,
+  .phase1-card,
+  .module-reference {
+    padding: var(--space-4);
+  }
+
+  .reminder-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

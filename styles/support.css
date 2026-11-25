@@ -1,0 +1,95 @@
+
+.crisis-panel {
+  max-width: 850px;
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-panel);
+  background: var(--surface-secondary);
+}
+
+.crisis-panel h2 {
+  margin: 0 0 var(--space-3);
+  font-size: 25px;
+  font-weight: 650;
+}
+
+.crisis-panel p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.crisis-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.help-details {
+  max-width: 850px;
+}
+
+.help-details h2 {
+  margin: var(--space-10) 0 var(--space-3);
+  font-size: 25px;
+  font-weight: 650;
+}
+
+.help-details p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.selftest-panel {
+  margin-top: var(--space-8);
+  padding: var(--space-4);
+  border: 1px solid var(--status-success);
+  border-radius: var(--radius-control);
+  background: var(--surface-secondary);
+}
+
+.selftest-panel[data-result="fail"] {
+  border-color: var(--status-error);
+}
+
+.selftest-panel h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.selftest-panel p {
+  color: var(--text-secondary);
+}
+
+.selftest-panel ol {
+  margin-bottom: 0;
+}
+
+.live-status {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.mobile-nav {
+  display: none;
+}
+

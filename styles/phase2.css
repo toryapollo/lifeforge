@@ -1,0 +1,206 @@
+.phase2-screen {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-8);
+}
+
+.phase2-group {
+  max-width: 900px;
+  min-width: 0;
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.phase2-group h2 {
+  margin: 0 0 var(--space-3);
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+.phase2-group > p {
+  max-width: 760px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.phase2-disclaimer {
+  max-width: 760px;
+  color: var(--text-primary);
+  font-weight: 650;
+}
+
+.phase2-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  align-items: end;
+  gap: var(--space-4);
+  margin-block: var(--space-4);
+}
+
+.phase2-form label {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.phase2-form label:has(textarea) {
+  grid-column: 1 / -1;
+}
+
+.phase2-scenario-prompt {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.phase2-form input,
+.phase2-form select,
+.phase2-form textarea,
+.phase2-table input {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: var(--space-3);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  font: inherit;
+  caret-color: var(--accent-primary);
+}
+
+.phase2-form textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.phase2-form input[type="checkbox"],
+.phase2-checklist input {
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+  accent-color: var(--accent-primary);
+}
+
+.phase2-form button {
+  min-height: 48px;
+  justify-self: start;
+}
+
+.phase2-result {
+  display: block;
+  min-height: 48px;
+  padding-block: var(--space-3);
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.phase2-ladder {
+  display: grid;
+  gap: var(--space-3);
+  padding-inline-start: var(--space-6);
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.phase2-checklist {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.phase2-checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: var(--text-secondary);
+}
+
+.phase2-checklist input {
+  flex: 0 0 auto;
+}
+
+.phase2-table-wrap {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.phase2-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.phase2-table caption {
+  padding-block: var(--space-2);
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.phase2-table th,
+.phase2-table td {
+  padding: var(--space-3);
+  text-align: left;
+}
+
+.phase2-table th {
+  color: var(--text-primary);
+}
+
+.phase2-records {
+  display: grid;
+  gap: var(--space-3);
+  padding-inline-start: var(--space-6);
+}
+
+.phase2-records li,.phase2-records p,.phase2-private li p { overflow-wrap: anywhere; }
+
+.phase2-records p {
+  color: var(--text-secondary);
+}
+
+.phase2-private {
+  margin-block: var(--space-4);
+  color: var(--text-secondary);
+}
+
+.phase2-private li {
+  padding-block: var(--space-3);
+}
+
+.phase2-timer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-block: var(--space-4);
+}
+
+.phase2-timer output {
+  color: var(--accent-gold);
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.button-danger {
+  border-color: var(--status-error);
+  color: var(--status-error);
+}
+
+::selection {
+  background: var(--accent-primary);
+  color: var(--accent-foreground);
+}
+
+@media (max-width: 560px) {
+  .phase2-timer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}

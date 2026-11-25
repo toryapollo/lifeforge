@@ -230,3 +230,27 @@
 .guide-habits dd { margin: 0 0 var(--space-2); color: var(--text-secondary); }
 .onboarding-screen .field-help { display: block; font-weight: 400; color: var(--text-secondary); font-size: 0.9rem; margin: 2px 0 4px; }
 #future-starter { justify-self: start; }
+
+/* "How to use this page" box and per-section "What to do" notes (page-guides.js) */
+.page-guide {
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border-default);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: var(--radius-control);
+  background: var(--surface-raised);
+}
+.page-guide summary { cursor: pointer; font-weight: 700; color: var(--accent-gold); min-height: 32px; display: flex; align-items: center; }
+.page-guide p { margin: var(--space-2) 0 0; }
+.page-guide ol { margin: var(--space-2) 0 0; padding-left: 1.3em; display: grid; gap: var(--space-1); }
+.section-help {
+  margin: var(--space-2) 0 var(--space-4);
+  padding: var(--space-3);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: var(--radius-control);
+  background: var(--surface-raised);
+  font-size: 0.95rem;
+}
+.section-help p { margin: 0; }
+.section-help ul { margin: var(--space-1) 0 0; padding-left: 1.2em; }
+.section-help .guide-examples summary { min-height: 28px; margin-top: var(--space-1); }

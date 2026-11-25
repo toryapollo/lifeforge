@@ -230,6 +230,7 @@
       routeView.insertAdjacentHTML("beforeend", renderPhase4Settings());
     }
     wireRouteActions();
+    if (typeof lfApplyPageGuides === "function") lfApplyPageGuides(currentRoute);
     if ((phase1Route || currentRoute === "settings") && typeof wirePhase1Actions === "function") {
       wirePhase1Actions(currentRoute);
     }

@@ -78,6 +78,7 @@
     check("navigation routes have visible labels and valid destinations", () => {
       for (const [route, label] of Object.entries(ROUTES)) {
         assert(route && label, "route has no label");
+        if (route === "fire") continue; // Life on Fire is built into the Reset page; no separate link
         assert(document.querySelector(`[data-route="${route}"]`), `navigation link missing for ${route}`);
       }
     });

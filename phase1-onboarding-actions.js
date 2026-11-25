@@ -41,6 +41,7 @@
       }, step === 6 ? "Setup saved. Begin with today." : "Step saved on this device.", true);
       if (step === 6) location.hash = "#/today";
     });
+    if (typeof wireOnboardingGuide === "function") wireOnboardingGuide();
     const back = document.getElementById("onboarding-back");
     if (back) back.addEventListener("click", () => updateState((next) => { next.onboarding.step = Math.max(0, step - 1); }, "Previous step.", true));
   }

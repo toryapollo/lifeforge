@@ -157,6 +157,10 @@
           <a class="button button-secondary" href="#/settings">Open Settings</a>
         </div>
       </section>
+      <section class="help-details" aria-labelledby="copyright-title">
+        <h2 id="copyright-title">Copyright</h2>
+        <p>© 2026 Tory Buccella. All rights reserved. LIFEFORGE is free for personal use. Please don't copy, modify or redistribute it without permission. Ideas and research credited to their teachers and authors remain theirs.</p>
+      </section>
     `;
   }
 

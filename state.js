@@ -94,6 +94,12 @@
 
   function applyPreferences() {
     document.documentElement.dataset.theme = state.preferences.theme;
+    document.documentElement.dataset.palette = state.preferences.palette;
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) {
+      const surface = getComputedStyle(document.documentElement).getPropertyValue("--surface-primary").trim();
+      if (surface) themeColor.setAttribute("content", surface);
+    }
     document.documentElement.dataset.reduceMotion = String(state.preferences.reduceMotion);
     document.documentElement.style.fontSize = `${17 * state.preferences.fontScale}px`;
   }

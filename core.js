@@ -12,10 +12,19 @@
     flow: "Flow",
     weekly: "Weekly review",
     settings: "Settings",
+    colors: "Colors",
     help: "Help",
     money: "Money", thinking: "Thinking", resilience: "Resilience", fire: "Life on Fire",
     speak: "Speak", conversations: "Conversations", progress: "Progress"
   });
+  const PALETTES = Object.freeze([
+    { id: "forest", label: "Forest", description: "Cool greens. The default." },
+    { id: "ocean", label: "Ocean", description: "Calm blues and teal." },
+    { id: "mint", label: "Mint", description: "Fresh green and lime." },
+    { id: "aurora", label: "Aurora", description: "Green with a violet glow." },
+    { id: "dusk", label: "Dusk", description: "Soft violet and pink." },
+    { id: "ember", label: "Ember", description: "The original brown and orange." }
+  ]);
   const DEFAULT_STATE = Object.freeze({
     schemaVersion: STATE_SCHEMA_VERSION,
     updatedAt: null,
@@ -34,6 +43,7 @@
     },
     preferences: {
       theme: "dark",
+      palette: "forest",
       reduceMotion: false, fontScale: 1
     },
     reminders: {
@@ -119,6 +129,9 @@
     const preferences = { ...DEFAULT_STATE.preferences, ...savedPreferences };
     if (!["dark", "light", "system"].includes(preferences.theme)) {
       throw new Error("Saved data contains an unknown theme preference.");
+    }
+    if (!PALETTES.some((palette) => palette.id === preferences.palette)) {
+      preferences.palette = DEFAULT_STATE.preferences.palette;
     }
     if (typeof preferences.reduceMotion !== "boolean") {
       throw new Error("Saved data contains an invalid reduced-motion preference.");

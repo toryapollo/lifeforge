@@ -1,4 +1,4 @@
-/* Phones (iPhone etc., <=560px wide): keep the bottom chrome short so lessons get the screen.
+/* Phones (iPhone etc., <=560px wide; 15 tabs = 2 rows of 8): keep the bottom chrome short so lessons get the screen.
    The 988 crisis line and Life on Fire stay visible on every screen. */
 @media (max-width: 560px) {
   .global-support {
@@ -19,7 +19,7 @@
   .global-support p + p { display: none; }   /* doctor/therapist line stays on Life on Fire and Help */
 
   .mobile-nav {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: repeat(8, minmax(0, 1fr));
     gap: 2px;
     padding-top: 4px;
     padding-bottom: calc(4px + env(safe-area-inset-bottom));
@@ -39,7 +39,7 @@
   .app-main input[type="date"], .app-main input[type="time"] { width: 100%; }
 }
 
-/* Very small phones (iPhone SE 1st gen, 320px): 7 tabs per row is too tight. */
+/* Very small phones (iPhone SE 1st gen, 320px): 8 tabs per row is too tight. */
 @media (max-width: 359px) {
   .mobile-nav { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }

@@ -94,6 +94,11 @@
 }
 
 
+.sidebar-note.with-copyright {
+  flex-direction: column;
+  gap: 0;
+}
+
 .sidebar-note .copyright {
   margin-top: var(--space-2);
   font-size: 0.75rem;

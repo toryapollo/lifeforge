@@ -131,6 +131,43 @@
     `;
   }
 
+  function renderColors() {
+    const mode = state.preferences.theme;
+    const modes = [["dark", "Dark"], ["light", "Light"], ["system", "Match device"]];
+    const cards = PALETTES.map((palette) => {
+      const chosen = state.preferences.palette === palette.id;
+      return `
+        <button type="button" class="palette-swatch" data-palette="${palette.id}" data-palette-choice="${palette.id}" aria-pressed="${chosen}">
+          <span class="swatch-preview" aria-hidden="true">
+            <span class="swatch-bar"></span>
+            <span class="swatch-line"></span>
+            <span class="swatch-line short"></span>
+            <span class="swatch-button">Start</span>
+          </span>
+          <span class="swatch-name">${palette.label}${chosen ? " <span class=\"swatch-check\">✓ In use</span>" : ""}</span>
+          <span class="swatch-desc">${palette.description}</span>
+        </button>`;
+    }).join("");
+    return `
+      ${issueBanner()}
+      <section aria-labelledby="route-title">
+        <p class="eyebrow">Make it yours</p>
+        <h1 class="page-title" id="route-title" tabindex="-1">Colors</h1>
+        <p class="lead">Pick a color scheme. It changes right away and is saved on this device.</p>
+      </section>
+      <section class="settings-group colors-mode" aria-labelledby="mode-title">
+        <h2 id="mode-title">Light or dark</h2>
+        <div class="mode-choices" role="group" aria-labelledby="mode-title">
+          ${modes.map(([value, label]) => `<button type="button" class="button ${mode === value ? "button-primary" : "button-secondary"}" data-mode-choice="${value}" aria-pressed="${mode === value}">${label}</button>`).join("")}
+        </div>
+      </section>
+      <section class="content-section" aria-labelledby="palette-title">
+        <h2 id="palette-title">Color scheme</h2>
+        <div class="palette-grid">${cards}</div>
+      </section>
+    `;
+  }
+
   function renderHelp() {
     return `
       ${issueBanner()}
@@ -181,6 +218,8 @@
         ? renderPhase3Route(currentRoute)
       : currentRoute === "settings"
       ? renderSettings()
+      : currentRoute === "colors"
+      ? renderColors()
       : currentRoute === "help"
         ? renderHelp()
         : renderMission();

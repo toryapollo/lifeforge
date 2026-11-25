@@ -1,0 +1,65 @@
+/* Colors tab: light/dark buttons and palette preview cards.
+   Each .palette-swatch carries data-palette, so palettes.css gives it that scheme's tokens. */
+.mode-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.palette-swatch {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border: 2px solid var(--border-default);
+  border-radius: var(--radius-panel);
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.palette-swatch:hover { border-color: var(--accent-hover); }
+.palette-swatch:focus-visible { outline: 3px solid var(--accent-primary); outline-offset: 2px; }
+.palette-swatch[aria-pressed="true"] { border-color: var(--accent-primary); box-shadow: 0 0 0 2px var(--accent-primary); }
+
+.swatch-preview {
+  display: grid;
+  gap: 6px;
+  margin-bottom: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-control);
+  background: var(--surface-primary);
+  border: 1px solid var(--border-default);
+}
+
+.swatch-bar { height: 8px; width: 40%; border-radius: 4px; background: var(--accent-gold); }
+.swatch-line { height: 6px; border-radius: 3px; background: var(--text-secondary); opacity: 0.6; }
+.swatch-line.short { width: 65%; }
+.swatch-button {
+  justify-self: start;
+  margin-top: 4px;
+  padding: 2px 12px;
+  border-radius: var(--radius-control);
+  background: var(--accent-primary);
+  color: var(--accent-foreground);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.swatch-name { font-weight: 700; }
+.swatch-check { margin-left: var(--space-2); color: var(--accent-gold); font-size: 0.85rem; }
+.swatch-desc { color: var(--text-secondary); font-size: 0.9rem; }
+
+@media (max-width: 560px) {
+  .palette-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+}
+
+.colors-mode { margin-top: var(--space-8); }
+.colors-mode h2 { margin-top: 0; }

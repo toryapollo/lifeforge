@@ -12,6 +12,22 @@
       });
     }
 
+    document.querySelectorAll("[data-palette-choice]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const label = button.querySelector(".swatch-name").textContent.replace("✓ In use", "").trim();
+        updateState((next) => {
+          next.preferences.palette = button.dataset.paletteChoice;
+        }, `${label} color scheme saved.`, true);
+      });
+    });
+    document.querySelectorAll("[data-mode-choice]").forEach((button) => {
+      button.addEventListener("click", () => {
+        updateState((next) => {
+          next.preferences.theme = button.dataset.modeChoice;
+        }, `${button.textContent} mode saved.`, true);
+      });
+    });
+
     const themeSelect = document.getElementById("theme-select");
     if (themeSelect) {
       themeSelect.addEventListener("change", () => {

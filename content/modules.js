@@ -2979,7 +2979,7 @@ window.LF_CONTENT = {
           "id": "M09-U09",
           "number": 9,
           "title": "Procrastination: it's an emotion problem, not a time problem",
-          "text": "Model (Piers Steel 2007 meta-analysis, Temporal Motivation Theory):\nMotivation = (Expectancy × Value) ÷ (Impulsiveness × Delay)\nLevers:\n- ↑ EXPECTANCY (I can do this): shrink the first step to ≤2 minutes (\"open the lab file and read question 1\"); start at the easiest entry point; remember past evidence (note 16).\n- ↑ VALUE: connect the task to the purpose and identity statements (notes 04, 14); add a dopamine trigger (novelty, a challenge timer, note 05).\n- ↓ DELAY: self-imposed deadlines help (Ariely & Wertenbroch 2002), but evenly spaced external deadlines work better. Ask for checkpoints or make them public to an accountability partner.\n- ↓ IMPULSIVENESS: remove temptations (friction, note 14), phone away, if-then plans.\n- SELF-FORGIVENESS: Wohl, Pychyl & Bennett 2010: forgiving yourself for procrastinating reduced it next time. Beating yourself up feeds avoidance (note 16).\nImplementation intentions for tasks: \"If it's 6:00 am Mon/Wed/Fri, then I open my course at my desk before any messages.\" Gollwitzer & Sheeran 2006 meta-analysis: d ≈ 0.65. A newer, bias-corrected 2024 review finds a smaller but still positive effect: a cheap tool, not magic.\n\n---",
+          "text": "Model (Piers Steel 2007 meta-analysis, Temporal Motivation Theory):\nMotivation = (Expectancy × Value) ÷ (Impulsiveness × Delay)\nLevers:\n- ↑ EXPECTANCY (I can do this): shrink the first step to ≤2 minutes (\"open the lab file and read question 1\"); start at the easiest entry point; remember past evidence (note 16).\n- ↑ VALUE: connect the task to the purpose and identity statements (notes 04, 14); add a dopamine trigger (novelty, a challenge timer, note 05).\n- ↓ DELAY: break big tasks into dated checkpoints so the payoff feels close, and share them with an accountability partner (practical advice; the often-cited Ariely & Wertenbroch 2002 deadlines study was retracted in 2026, so it is no longer used as evidence here).\n- ↓ IMPULSIVENESS: remove temptations (friction, note 14), phone away, if-then plans.\n- SELF-FORGIVENESS: Wohl, Pychyl & Bennett 2010: forgiving yourself for procrastinating reduced it next time. Beating yourself up feeds avoidance (note 16).\nImplementation intentions for tasks: \"If it's 6:00 am Mon/Wed/Fri, then I open my course at my desk before any messages.\" Gollwitzer & Sheeran 2006 meta-analysis: d ≈ 0.65. A 2024 review of 642 tests (Sheeran, Listrom & Gollwitzer) found effects from small to medium-large (d ≈ 0.27–0.66) depending on the outcome, strongest when the plan is a true if-then sentence, the goal matters to you, and you rehearse the plan. A cheap tool, not magic.\n\n---",
           "recallCardIds": [
             "M09-C09"
           ]
@@ -3191,16 +3191,16 @@ window.LF_CONTENT = {
       ],
       "resources": [
         {
-          "text": "Masicampo & Baumeister 2011, \"Consider It Done! Plan Making Can Eliminate the Cognitive Effects of Unfulfilled Goals\" (Journal of Personality and Social Psychology (JPSP)). Record: https://bvbvf1.bib-bvb.de/vufind/PrimoRecord/cdi_proquest_miscellaneous_918752704"
+          "text": "Masicampo & Baumeister 2011, \"Consider It Done! Plan Making Can Eliminate the Cognitive Effects of Unfulfilled Goals\" (Journal of Personality and Social Psychology (JPSP)): https://doi.org/10.1037/a0024192"
         },
         {
-          "text": "Sophie Leroy — attention residue & ready-to-resume plans: https://www.uwb.edu/business/faculty/sophie-leroy/attention-residue"
+          "text": "Sophie Leroy 2009, attention residue: https://doi.org/10.1016/j.obhdp.2009.04.002 · Leroy & Glomb 2018, ready-to-resume plans: https://doi.org/10.1287/orsc.2017.1184"
         },
         {
-          "text": "Cal Newport — plan your week in advance: https://calnewport.com/deep-habits-plan-your-week-in-advance/ · \"The Time-Block Planner\": https://penguinrandomhouse.com/books/647239/the-time-block-planner-by-cal-newport"
+          "text": "Cal Newport — plan your week in advance: https://calnewport.com/deep-habits-plan-your-week-in-advance/ · \"The Time-Block Planner\" (Cal Newport, 2020; book)"
         },
         {
-          "text": "Implementation intentions meta-analysis + 2024 bias-corrected update (summary): https://kops.uni-konstanz.de/server/api/core/bitstreams/eb48c8cf-7855-478e-90ec-1ea6d44f8252/content"
+          "text": "Implementation intentions: Gollwitzer & Sheeran review chapter (Portable Document Format (PDF)): https://kops.uni-konstanz.de/server/api/core/bitstreams/eb48c8cf-7855-478e-90ec-1ea6d44f8252/content · 2024 meta-analysis of 642 tests: https://doi.org/10.1080/10463283.2024.2334563"
         },
         {
           "text": "Burkeman \"Four Thousand Weeks\" summary: https://nextbigideaclub.com/magazine/four-thousand-weeks-time-management-mortals-bookbite/29527/"
@@ -3209,7 +3209,7 @@ window.LF_CONTENT = {
           "text": "Books: David Allen \"Getting Things Done\"; Greg McKeown \"Essentialism\"; Gary Keller \"The ONE Thing\"; Covey \"7 Habits\" (Habit 3, Quadrant 2); William Ury \"The Power of a Positive No\"; Piers Steel \"The Procrastination Equation\"."
         },
         {
-          "text": "Classic studies cited from established literature: Buehler, Griffin & Ross 1994 (planning fallacy); Steel 2007 (procrastination meta-analysis); Wohl, Pychyl & Bennett 2010 (self-forgiveness); Ariely & Wertenbroch 2002 (deadlines); Ward et al. 2017 (smartphone \"brain drain\", mixed replications)."
+          "text": "Classic studies cited from established literature: Buehler, Griffin & Ross 1994 (planning fallacy); Steel 2007 (procrastination meta-analysis); Wohl, Pychyl & Bennett 2010 (self-forgiveness); Ward et al. 2017 (smartphone \"brain drain\", mixed replications)."
         },
         {
           "text": "Kept out: claims that any single system is \"proven best\"; Newport's \"40 h blocked = 60 h unstructured\" (his estimate, not data)."

@@ -48,7 +48,7 @@
 
     const exportButton = document.getElementById("export-data");
     if (exportButton) {
-      exportButton.addEventListener("click", exportData);
+      exportButton.addEventListener("click", () => { exportData(); if (typeof lfMarkBackedUp === "function") lfMarkBackedUp(); });
     }
 
     const importButton = document.getElementById("import-data");
@@ -77,6 +77,11 @@
         const reader = new FileReader();
         reader.addEventListener("load", () => {
           try {
+            if (!window.confirm("Importing replaces everything currently in LIFEFORGE on this device with the backup file. A private snapshot of your current data is saved first. Continue?")) {
+              importFile.value = "";
+              setStatus("Import cancelled. Nothing changed.");
+              return;
+            }
             importJsonText(String(reader.result));
             importFile.value = "";
           } catch (error) {
@@ -115,7 +120,7 @@
   }
 
   function exportData() {
-    const name = `lifeforge-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    const name = `lifeforge-backup-${typeof lfTodayISO === "function" ? lfTodayISO() : new Date().toISOString().slice(0, 10)}.json`;
     const data = exportEnvelope();
     try {
       if (isAndroidNative) {

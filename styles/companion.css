@@ -1,0 +1,24 @@
+/* companion.js: next-step card, backup banner, buddy check-in */
+.next-step-card, .backup-banner {
+  margin: var(--space-5) 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-panel);
+  border: 1px solid var(--border-default);
+  background: var(--surface-secondary);
+}
+.next-step-card { border-top: 4px solid var(--accent-primary); }
+.next-step-card h2 { margin: var(--space-1) 0 var(--space-2); }
+.next-step-card p { margin: 0 0 var(--space-2); }
+.next-step-card .page-actions, .backup-banner .page-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-3) 0; }
+.path-bar { display: block; width: 100%; height: 8px; margin: var(--space-3) 0; border: 0; border-radius: 4px; background: var(--surface-raised); accent-color: var(--accent-primary); -webkit-appearance: none; appearance: none; overflow: hidden; }
+.path-bar::-webkit-progress-bar { background: var(--surface-raised); border-radius: 4px; }
+.path-bar::-webkit-progress-value { background: var(--accent-primary); border-radius: 4px; }
+.path-bar::-moz-progress-bar { background: var(--accent-primary); border-radius: 4px; }
+.path-list summary { cursor: pointer; color: var(--accent-gold); font-weight: 700; min-height: 32px; display: flex; align-items: center; }
+.path-list ol { margin: var(--space-2) 0 0; padding-left: 1.4em; display: grid; gap: 2px; }
+.path-list li.is-done { color: var(--text-muted); }
+.link-button { background: none; border: 0; padding: 0; color: var(--accent-gold); font: inherit; text-decoration: underline; cursor: pointer; }
+.backup-banner { border-left: 4px solid var(--accent-gold); }
+.backup-banner p { margin: 0; }
+.data-safety .page-actions { margin: var(--space-2) 0; }
+.buddy-panel .page-actions { margin: var(--space-3) 0 var(--space-1); }

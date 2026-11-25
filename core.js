@@ -70,6 +70,7 @@
     weeklyDraft: { step: 0, notes: {}, outcomes: ["", "", ""], scorecard: {} },
     reminderSchedule: { mission: null, srs: null },
     evidenceLog: [],
+    companion: lfNormalizeCompanion(),
     ...LF_P2_STATE_DEFAULTS,
     ...LF_P3_STATE_DEFAULTS
   });
